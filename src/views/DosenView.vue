@@ -43,7 +43,7 @@ export default defineComponent({
         alert('Field nama belum di isi')
         return
       }
-      const dosen: Dosen = new DosenService(this.form.nidn, this.form.nama)
+      const dosen = new DosenService(this.form.nidn, this.form.nama)
       if (dosen.store()) {
         alert(`Data Dosen ${this.form.nama} berhasil disimpan`)
         return
