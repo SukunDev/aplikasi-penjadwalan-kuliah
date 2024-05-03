@@ -16,17 +16,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Dosen from '../types/DosenInterface.ts'
-import DosenService from '../services/DosenService.ts'
+import Dosen from '../types/DosenInterface'
+import DosenService from '../services/DosenService'
 
 export default defineComponent({
   name: 'dosen-view',
   data() {
     return {
       form: {
-        nidn: 0 as number,
-        nama: '' as string
-      }
+        nidn: 0,
+        nama: ''
+      } as Dosen
     }
   },
   methods: {

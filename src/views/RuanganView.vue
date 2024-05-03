@@ -16,17 +16,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Ruangan from '../types/RuanganInterface.ts'
-import RuanganService from '../services/RuanganService.ts'
+import Ruangan from '@/types/RuanganInterface'
+import RuanganService from '../services/RuanganService'
 
 export default defineComponent({
   name: 'ruangan-view',
   data() {
     return {
       form: {
-        code_ruangan: 0 as number,
-        nama: '' as string
-      }
+        code_ruangan: 0,
+        nama: ''
+      } as Ruangan
     }
   },
   methods: {
@@ -43,7 +43,7 @@ export default defineComponent({
         alert('Field Nama belum di isi')
         return
       }
-      const ruangan: Ruangan = new RuanganService(this.form.code_ruangan, this.form.nama)
+      const ruangan = new RuanganService(this.form.code_ruangan, this.form.nama)
       if (ruangan.store()) {
         alert(`Data Ruangan ${this.form.nama} berhasil disimpan`)
         return

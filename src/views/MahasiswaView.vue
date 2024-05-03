@@ -20,18 +20,18 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Mahasiswa from '../types/MahasiswaInterface.ts'
-import MahasiswaService from '../services/MahasiswaService.ts'
+import Mahasiswa from '../types/MahasiswaInterface'
+import MahasiswaService from '../services/MahasiswaService'
 
 export default defineComponent({
   name: 'mahasiswa-view',
   data() {
     return {
       form: {
-        npm: 0 as number,
-        nama: '' as string,
-        ipk: 0 as number
-      }
+        npm: 0,
+        nama: '',
+        ipk: 0
+      } as Mahasiswa
     }
   },
   methods: {
@@ -52,11 +52,7 @@ export default defineComponent({
         alert('IPK harus di antara 0 sampai 4')
         return
       }
-      const mahasiswa: Mahasiswa = new MahasiswaService(
-        this.form.npm,
-        this.form.nama,
-        this.form.ipk
-      )
+      const mahasiswa = new MahasiswaService(this.form.npm, this.form.nama, this.form.ipk)
       if (mahasiswa.store()) {
         alert(`Data Mahasiswa ${this.form.nama} berhasil disimpan`)
         return
