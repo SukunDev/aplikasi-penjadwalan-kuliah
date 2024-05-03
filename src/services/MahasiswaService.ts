@@ -1,4 +1,4 @@
-export class MahasiswaService {
+export default class MahasiswaService {
   npm: number
   nama: string
   ipk: number

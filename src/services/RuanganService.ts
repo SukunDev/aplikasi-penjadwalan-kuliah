@@ -1,4 +1,4 @@
-export class RuanganService {
+export default class RuanganService {
   code_ruangan: number
   nama: string
 

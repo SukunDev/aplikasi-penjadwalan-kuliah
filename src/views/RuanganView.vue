@@ -17,29 +17,29 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Ruangan from '../types/RuanganInterface.ts'
-import { RuanganService } from '../services/RuanganService.ts'
+import RuanganService from '../services/RuanganService.ts'
 
 export default defineComponent({
   name: 'ruangan-view',
   data() {
     return {
       form: {
-        code_ruangan: '',
-        nama: ''
+        code_ruangan: 0 as number,
+        nama: '' as string
       }
     }
   },
   methods: {
     onSubmitHandler() {
-      if (this.form.code_ruangan.length < 1 && !this.form.nama) {
+      if (!this.form.code_ruangan && this.form.nama.length < 1) {
         alert('Field Kode Ruangan dan Nama belum di isi')
         return
       }
-      if (this.form.code_ruangan.length < 1) {
+      if (!this.form.code_ruangan) {
         alert('Field Kode Ruangan belum di isi')
         return
       }
-      if (!this.form.nama) {
+      if (this.form.nama.length < 1) {
         alert('Field Nama belum di isi')
         return
       }

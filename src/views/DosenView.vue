@@ -17,29 +17,29 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Dosen from '../types/DosenInterface.ts'
-import { DosenService } from '../services/DosenService.ts'
+import DosenService from '../services/DosenService.ts'
 
 export default defineComponent({
   name: 'dosen-view',
   data() {
     return {
       form: {
-        nidn: '',
-        nama: ''
+        nidn: 0 as number,
+        nama: '' as string
       }
     }
   },
   methods: {
     onSubmitHandler() {
-      if (this.form.nidn.length < 1 && !this.form.nama) {
+      if (!this.form.nidn && this.form.nama.length < 1) {
         alert('Field NIDN dan Nama belum di isi')
         return
       }
-      if (this.form.nidn.length < 1) {
+      if (!this.form.nidn) {
         alert('Field NIDN belum di isi')
         return
       }
-      if (!this.form.nama) {
+      if (this.form.nama.length < 1) {
         alert('Field nama belum di isi')
         return
       }

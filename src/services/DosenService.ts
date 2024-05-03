@@ -1,4 +1,4 @@
-export class DosenService {
+export default class DosenService {
   nidn: number
   nama: string
 
