@@ -2,8 +2,8 @@
   <div class="main-content">
     <h3>Selamat Datamg Di Aplikasi</h3>
     <h4>Aplikasi ini dibuat oleh</h4>
-    <p>NPM: 123456</p>
-    <p>Nama: Esa Fauzi</p>
+    <p>NPM: 0620101030</p>
+    <p>Nama: Risty ads</p>
   </div>
 </template>
 
