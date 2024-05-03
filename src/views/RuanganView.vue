@@ -4,7 +4,7 @@
 
     <div class="form-group">
       <label for="kodeRuanganInput">Kode Ruangan</label>
-      <input type="text" class="form-control" id="kodeRuanganInput" v-model="form.code_ruangan" />
+      <input type="number" class="form-control" id="kodeRuanganInput" v-model="form.code_ruangan" />
     </div>
     <div class="form-group">
       <label for="namaInput">Nama</label>
