@@ -1,18 +1,24 @@
-# aplikasi-penjadwalan-kuliah
+# Aplikasi Penjadwalan Kuliah
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplikasi CRUD Penjadwalan Kuliah
 
-## Recommended IDE Setup
+## Screenshoot
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Home
 
-## Type Support for `.vue` Imports in TS
+![Home](/public/images/Home.png)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Dosen
 
-## Customize configuration
+![Dosen](/public/images/Dosen.png)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Mahasiswa
+
+![Mahasiswa](/public/images/Mahasiswa.png)
+
+### Ruangan
+
+![Ruangan](/public/images/Ruangan.png)
 
 ## Project Setup
 
