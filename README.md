@@ -2,12 +2,12 @@
 
 Aplikasi CRUD Penjadwalan Kuliah
 
-|   Page    |                           Image                           |
-| :-------: | :-------------------------------------------------------: |
-|   Home    |   <img src="public/images/Home.png" width="45%"></img>    |
-|   Dosen   |   <img src="public/images/Dosen.png" width="45%"></img>   |
+| Page      |                           Image                           |
+| --------- | :-------------------------------------------------------: |
+| Home      |   <img src="public/images/Home.png" width="45%"></img>    |
+| Dosen     |   <img src="public/images/Dosen.png" width="45%"></img>   |
 | Mahasiswa | <img src="public/images/Mahasiswa.png" width="45%"></img> |
-|  Ruangan  |  <img src="public/images/Ruangan.png" width="45%"></img>  |
+| Ruangan   |  <img src="public/images/Ruangan.png" width="45%"></img>  |
 
 ## Project Setup
 
