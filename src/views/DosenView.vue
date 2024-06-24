@@ -10,6 +10,13 @@
       <label for="namaInput">Nama</label>
       <input type="text" class="form-control" id="namaInput" v-model="form.nama" />
     </div>
+    <div class="form-group">
+      <label for="namaInput">Nama</label>
+      <select type="text" class="form-control" id="namaInput" v-model="form.jenis_kelamin">
+        <option value="laki laki">Laki Laki</option>
+        <option value="perempuan">Perempuan</option>
+      </select>
+    </div>
     <button @click="onSubmitHandler" class="btn btn-primary">Submit</button>
   </div>
 </template>
@@ -25,14 +32,15 @@ export default defineComponent({
     return {
       form: {
         nidn: 0,
-        nama: ''
+        nama: '',
+        jenis_kelamin: 'laki laki'
       } as Dosen
     }
   },
   methods: {
     onSubmitHandler() {
-      if (!this.form.nidn && this.form.nama.length < 1) {
-        alert('Field NIDN dan Nama belum di isi')
+      if (!this.form.nidn && this.form.nama.length < 1 && this.form.jenis_kelamin.length < 1) {
+        alert('Field NIDN, Nama, dan Jenis Kelamin belum di isi')
         return
       }
       if (!this.form.nidn) {
@@ -40,10 +48,14 @@ export default defineComponent({
         return
       }
       if (this.form.nama.length < 1) {
-        alert('Field nama belum di isi')
+        alert('Field Nama belum di isi')
         return
       }
-      const dosen = new DosenService(this.form.nidn, this.form.nama)
+      if (this.form.jenis_kelamin.length < 1) {
+        alert('Field Jenis Kelamin belum di isi')
+        return
+      }
+      const dosen = new DosenService(this.form.nidn, this.form.nama, this.form.jenis_kelamin)
       if (dosen.store()) {
         alert(`Data Dosen ${this.form.nama} berhasil disimpan`)
         return
